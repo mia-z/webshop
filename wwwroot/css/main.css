@@ -1,0 +1,155 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
+* {
+    box-sizing: border-box;
+}
+
+a, a:link, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.products-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.prod-image {
+    height: 350px;
+    width: 300px;
+}
+
+.prod-group {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.prod-bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-text {
+    width: 75%;
+    margin-left: 5px;
+}
+
+.right-text {
+    width: 25%;
+    text-align: right;
+    margin-right: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left, .right {
+    width: 50%;
+}
+
+.page-image {
+    width: calc(100% * 0.9);
+}
+
+.control-box {
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+    width: calc(100% * 0.75);
+    border: 2px double whitesmoke;
+    padding: 10px 0;
+}
+
+.control-box p, .control-box select, .control-box button, .control-box label {
+    margin: 5px;
+}
+
+.control-box p, .control-box label {
+    text-align: center;
+}
+
+#quantity-select:disabled {
+    background: white;
+    width: 30px;
+    text-align: center;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.prod-line {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.prod-line-anchor{
+    padding-left: 5px;
+    width: 80%;
+}
+
+.prod-line-button {
+    width: 20%;
+}
+
+.prod-line-button button {
+    height: 100%; 
+    width: 100%;
+}
+
+.prod-line:hover {
+    color: whitesmoke;
+    background: grey;
+}
+
+button[id^="btn-cart-delete"]{
+    display: none;
+}
+
+#btn-checkout {
+    padding: 2px 5px;
+}
+
+#cartSum {
+    text-align: center;
+}
+
+.checkout-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: calc(100% * 0.75);
+}
+
+.checkout-table {
+    width: 100%;
+}
+
+.checkout-controllers {
+    width: calc(100% * 0.6);
+    margin: 0 auto;
+}
+
+button[id^="checkout-table-row-button-"]{
+    display: none;
+}
+
+input[id^="checkout-table-row-amount-"] {
+    width: 70px;
+}
+
+/* EXPLICIT BOOTSTRAP OVERRIDES */
+.dropdown-menu {
+    width: 300px;
+}

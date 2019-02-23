@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/wwwroot/js/entities/product.js"></script>
+        <script type="text/javascript" src="/wwwroot/js/main.js"></script>
+        <script type="text/javascript" src="wwwroot/js/controllers/checkoutcontroller.js"></script>
+        <link rel="stylesheet" href="/wwwroot/css/main.css">
+        <title>webshop</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">miaz. webshop</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu" id="catDropDown" area-labelledby="navbarDropdownMenuLink">
+                            <!-- Category list drop down -->
+                        </div>
+                    </li>
+                </ul>
+                <div class="dropdown" id="cartdropdown">
+                    <a class="btn btn-info dropdown-toggle cartButton" type="button"
+                    href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                        <img src="wwwroot/media/icon/cart.svg" class="icon">
+                        Cart/Checkout
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink"
+                    id="cartContents">
+                        <div class="cartItems">
+                            <a class="dropdown-item" id="ifEmptyCart">Empty!</a>
+                            <div id="hideable">
+                                <div class="cart-list">
+                                    <!-- Cart items appended to here -->
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="cartSum"></a>
+                                <a href="checkout.html">
+                                    <button type="button" id="btn-checkout" class="btn btn-primary btn-success btn-block rounded-0">Checkout</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="checkout-wrapper">
+                <div class="checkout-table">
+                    <table class="table checkout-table table-hover">
+                        <thead>
+                            <tr>
+                                <th colspan="5" style="text-align: center">Checkout</th>
+                            </tr>
+                            <tr class="thead-dark">
+                                <th>Product Name</th>
+                                <th>Colour</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="checkout-table-body">
+                            <!--Appended cart items here -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                            <th colspan="1" class="checkout-table-foot" style="text-align: left">
+                                Net total: 
+                            </th>
+                            <th colspan="3" id="net-total-number" class="checkout-table-foot" style="text-align: right">
+                                <!--Net total here -->
+                            </th>
+                            <th colspan="1" id="net-total-number" class="checkout-table-foot" style="text-align: left">
+                                :-
+                            </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="checkout-controllers">
+                    <button class="btn btn-success btn-block rounded-0 place-order">Confirm order</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+        <!--Modal stuff-->
+        <div class="modal fade" id="modal-confirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Delete item?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    You set the item quantity to below 1, would you like to remove it?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" id="modal-delete-item" data-dismiss="modal">Remove</button>
+                  <button type="button" class="btn btn-success" data-dismiss="modal">Keep</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>
