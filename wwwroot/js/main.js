@@ -4,14 +4,14 @@ var colourlist = [];
 var cart = JSON.parse(localStorage.getItem("cartItems"));
 if (cart == undefined) { cart = []; localStorage.setItem("cartItems", JSON.stringify(cart)); }
 var cartsum, cartcontent, cartbutton, cartclear;
-
+/*
 if (navigator.userAgent.indexOf("Firefox") != -1) {
     setInterval(function() {
         alert("DONT VIEW SITE IN FIREFOX\nUSE CHROME OR EDGE");
     }, 1);
-}
+}*/
    
-$.getJSON("/wwwroot/data/products.json", function(data) { //initializes products from json file
+$.getJSON("/webshop/wwwroot/data/products.json", function(data) { //initializes products from json file
     data.forEach(element => {
         let p = new Product(element.id, element.name, element.category, element.price, element.imageUrl, element.desc);
         p.setColours = element.colours;
@@ -19,7 +19,7 @@ $.getJSON("/wwwroot/data/products.json", function(data) { //initializes products
     });
 });
 
-$.getJSON("/wwwroot/data/categories.json", function(data) { //initializes categories from json file
+$.getJSON("/webshop/wwwroot/data/categories.json", function(data) { //initializes categories from json file
     data.forEach(element => {
         categorylist.push(element);
         $("#catDropDown").append("<a class='dropdown-item' href='category.html'>"+element+"</a>")
@@ -29,7 +29,7 @@ $.getJSON("/wwwroot/data/categories.json", function(data) { //initializes catego
     });
 });
 
-$.getJSON("/wwwroot/data/colours.json", function(data) { //initializes colours from json file
+$.getJSON("/webshop/wwwroot/data/colours.json", function(data) { //initializes colours from json file
     data.forEach(element => {
         colourlist.push(element);
     });
