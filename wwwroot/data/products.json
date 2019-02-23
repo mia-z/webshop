@@ -1,13 +1,13 @@
 [ 
-    {"id" : 0, "name" : "Cool Tshirt", "category" : "Tops", "price" : 299, "colours" : ["Red", "White", "Blue", "Green", "Black"], "imageUrl" : "/webshop/wwwroot/media/image/cooltee.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 1, "name" : "Funky Tshirt", "category" : "Tops", "price" : 299, "colours" : ["Red", "White", "Blue", "Green", "Black"], "imageUrl" : "/webshop/wwwroot/media/image/funkytee.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 2, "name" : "Plain Tshirt", "category" : "Tops", "price" : 199, "colours" : ["White", "Black"], "imageUrl" : "/webshop/wwwroot/media/image/plaintee.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 3, "name" : "Cool Jeans", "category" : "Bottoms", "price" : 999, "colours" : ["Blue", "Black"], "imageUrl" : "/webshop/wwwroot/media/image/cooljeans.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 4, "name" : "Cinos", "category" : "Bottoms", "price" : 499, "colours" : ["Biege", "Blue", "Black"], "imageUrl" : "/webshop/wwwroot/media/image/cinosnotcinoslol.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 5, "name" : "Plain Jeans", "category" : "Bottoms", "price" : 599, "colours" : ["Blue"], "imageUrl" : "/webshop/wwwroot/media/image/plainjeans.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 6, "name" : "Trainer Socks", "category" : "Socks", "price" : 49, "colours" : ["White", "Black", "Blue", "Red", "Purple"], "imageUrl" : "/webshop/wwwroot/media/image/tsocks.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 7, "name" : "Normal Socks", "category" : "Socks", "price" : 99, "colours" : ["White", "Black", "Blue", "Red", "Purple"], "imageUrl" : "/webshop/wwwroot/media/image/regsox.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 8, "name" : "Printed Socks", "category" : "Socks", "price" : 199, "colours" : ["Pink", "Purple", "Green"], "imageUrl" : "/webshop/wwwroot/media/image/printedsocks.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 9, "name" : "Canvas Shoes", "category" : "Shoes", "price" : 699, "colours" : ["Red", "White", "Blue", "Green", "Black"], "imageUrl" : "/webshop/wwwroot/media/image/canvasshoes.jpg", "selectedColour" : "", "desc": "Description"},
-    {"id" : 10, "name" : "Sports Shoes", "category" : "Shoes", "price" : 899, "colours" : ["White", "Blue", "Silver"], "imageUrl" : "/webshop/wwwroot/media/image/sportstrainers.jpg", "selectedColour" : "", "desc": "Description"}
+    {"id" : 0, "name" : "Cool Tshirt", "category" : "Tops", "price" : 299, "colours" : ["Red", "White", "Blue", "Green", "Black"], "imageUrl" : "/wwwroot/media/image/cooltee.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 1, "name" : "Funky Tshirt", "category" : "Tops", "price" : 299, "colours" : ["Red", "White", "Blue", "Green", "Black"], "imageUrl" : "/wwwroot/media/image/funkytee.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 2, "name" : "Plain Tshirt", "category" : "Tops", "price" : 199, "colours" : ["White", "Black"], "imageUrl" : "/wwwroot/media/image/plaintee.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 3, "name" : "Cool Jeans", "category" : "Bottoms", "price" : 999, "colours" : ["Blue", "Black"], "imageUrl" : "/wwwroot/media/image/cooljeans.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 4, "name" : "Cinos", "category" : "Bottoms", "price" : 499, "colours" : ["Biege", "Blue", "Black"], "imageUrl" : "/wwwroot/media/image/cinosnotcinoslol.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 5, "name" : "Plain Jeans", "category" : "Bottoms", "price" : 599, "colours" : ["Blue"], "imageUrl" : "/wwwroot/media/image/plainjeans.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 6, "name" : "Trainer Socks", "category" : "Socks", "price" : 49, "colours" : ["White", "Black", "Blue", "Red", "Purple"], "imageUrl" : "/wwwroot/media/image/tsocks.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 7, "name" : "Normal Socks", "category" : "Socks", "price" : 99, "colours" : ["White", "Black", "Blue", "Red", "Purple"], "imageUrl" : "/wwwroot/media/image/regsox.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 8, "name" : "Printed Socks", "category" : "Socks", "price" : 199, "colours" : ["Pink", "Purple", "Green"], "imageUrl" : "/wwwroot/media/image/printedsocks.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 9, "name" : "Canvas Shoes", "category" : "Shoes", "price" : 699, "colours" : ["Red", "White", "Blue", "Green", "Black"], "imageUrl" : "/wwwroot/media/image/canvasshoes.jpg", "selectedColour" : "", "desc": "Description"},
+    {"id" : 10, "name" : "Sports Shoes", "category" : "Shoes", "price" : 899, "colours" : ["White", "Blue", "Silver"], "imageUrl" : "/wwwroot/media/image/sportstrainers.jpg", "selectedColour" : "", "desc": "Description"}
 ]

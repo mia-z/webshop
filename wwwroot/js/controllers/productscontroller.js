@@ -7,9 +7,10 @@ $(document).ready(function () {
     $("#catprodBreadcrumb").html(localStorage.getItem("selectedCategory")+ " - " +
     localStorage.getItem("selectedProduct"));
     spo = db.find(x => x.name == localStorage.getItem("selectedProduct"));
-    //$("#product-image").attr("src", spo.imageUrl); //idk why this doesnt work lol
 
-    $(".left").append("<img class='page-image' src='"+spo.imageUrl+"'>") //but this does?
+    $(".left").append("<img class='page-image' id='product-image'>") 
+    $("#product-image").attr("src", spo.imageUrl); 
+
     $("#colour-select").append("<option selected='true' disabled>Choose Colour</option>");
     
     buildQuantitySelector();
