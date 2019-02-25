@@ -10,6 +10,7 @@ $(document).ready(function () {
             //having to use a setTimeout to halt the page loading because
             //of the nature of how firefox works. if u find me with a bullet
             //in my head and no note this is the reason why. fuck firefox.
+            //apparently this also happens in Safari, but not as often.
             addproducts();
             clicky = document.querySelectorAll(".prod-group");
             clicky.forEach(element => {
