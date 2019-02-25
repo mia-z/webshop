@@ -2,6 +2,7 @@ var clicky;
 var filteredProducts = [];
 
 $(document).ready(function () {
+    checkoutPage = false;
     $("#catprodBreadcrumb").html(localStorage.getItem("selectedCategory"));
     if (navigator.userAgent.indexOf("Firefox") != -1) {
         setTimeout(() => { 

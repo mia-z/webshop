@@ -4,6 +4,7 @@ var netTotal = 0;
 var xyz;
 
 $(document).ready(function () {
+    checkoutPage = true;
     tbody = $(".checkout-table-body");
     tfoot = $("#net-total-number")[0];
     $("#modal-delete-item").on("click", function() {
@@ -52,6 +53,10 @@ function removeRow(key) {
     let newnet = Number(tfoot.innerText);
     newnet -= cart[key]["item"].price;
     tfoot.innerText = newnet;
-    deleteCartItem(cart[key]);
+    cart = cart.filter(function(item) {
+        return item != cart[key];
+    });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    refreshCart();
     $("#checkout-table-row-" + key).remove();
 }

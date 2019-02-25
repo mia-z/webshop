@@ -1,3 +1,5 @@
+var checkoutPage = false;
+
 var db = [];
 var categorylist = [];
 var colourlist = [];
@@ -98,17 +100,22 @@ function showItems(range, element) {
             $("#btn-cart-delete-"+key).show();
         });
         $("#btn-cart-delete-"+key).on("click", function() {
-            deleteCartItem(cart[key]);
+            deleteCartItem(key);
         });
     });
 }
 
 function deleteCartItem(x) {
-    cart = cart.filter(function(item) {
-        return item != x;
-    });
-    localStorage.setItem("cartItems", JSON.stringify(cart));
-    refreshCart();
+    let itemToRemove = cart[x];
+    if (checkoutPage) {
+        removeRow(x)
+    } else {
+        cart = cart.filter(function(item) {
+        return item != itemToRemove;
+        });
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+        refreshCart();
+    }   
 }
 
 function calcCartSum(x) {

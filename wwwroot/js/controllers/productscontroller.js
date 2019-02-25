@@ -4,6 +4,7 @@ var quantityChangers;
 var quant = 0;
 
 $(document).ready(function () {
+    checkoutPage = false;
     $("#catprodBreadcrumb").html(localStorage.getItem("selectedCategory")+ " - " +
     localStorage.getItem("selectedProduct"));
     spo = db.find(x => x.name == localStorage.getItem("selectedProduct"));
