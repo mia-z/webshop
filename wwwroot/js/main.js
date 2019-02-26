@@ -119,8 +119,8 @@ function deleteCartItem(x) {
 
 function calcCartSum(x) {
     let sum = 0;
-    x.forEach(item => {
-        sum += eval(item["item"].price + " * " + item["amount"]);
+    $.each(x, function(key, entry) {
+        sum += Number(entry["item"].price) *  Number(entry["amount"]);
     });
     return sum;
 }
