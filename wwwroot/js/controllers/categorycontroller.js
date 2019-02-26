@@ -1,18 +1,40 @@
 var clicky;
+var filteredProducts = [];
 
 $(document).ready(function () {
+    checkoutPage = false;
     $("#catprodBreadcrumb").html(localStorage.getItem("selectedCategory"));
-    addproducts();
+    if (navigator.userAgent.indexOf("Firefox") != -1) {
+        setTimeout(() => { 
+            //this is the only thing that made firefox work. 
+            //ive spent literally 20+ hours trying to fix this stupid bullshit without
+            //having to use a setTimeout to halt the page loading because
+            //of the nature of how firefox works. if u find me with a bullet
+            //in my head and no note this is the reason why. fuck firefox.
+            //apparently this also happens in Safari, but not as often.
+            addproducts();
+            clicky = document.querySelectorAll(".prod-group");
+            clicky.forEach(element => {
+                element.addEventListener("click", function() {
+                    selectedProduct(this);
+                });
+            });
+        }, 400);
+    }  else {
+        //oh look no setTimeout and everything works perfectly
+        //yes - even in Microsoft edge!
+        addproducts();
         clicky = document.querySelectorAll(".prod-group");
         clicky.forEach(element => {
             element.addEventListener("click", function() {
                 selectedProduct(this);
             });
-        })
+        });
+    }
 });
 
 function addproducts() {
-    var filteredProducts = db.filter(function (item) {
+    filteredProducts = db.filter(function (item) {
         return item.category == localStorage.getItem("selectedCategory");
     });
     filteredProducts.forEach(element => {
